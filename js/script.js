@@ -15,22 +15,22 @@ Properties: quote, source, citation, year
 About: Contains the list of quotes to be used in the application
 */
 var quoteList= [
-{quote:"A positive attitude may not solve all your problems, but it will annoy enough people to make it worth the effort", source: "Herm Albright", citation: "Reader's Digest", year:"1995"}, 
-{quote:"Wherever you go, no matter what the weather, always bring your own sunshine. ", source:"Anthony J. D' Angelo", source: "The College Blue Book"}, 
-{quote:"To find someone who will love you for no reason, and to shower that person with reasons, that is the ultimate happiness.", source:"Robert Brault"}, 
-{quote:"It is never too late to be what you might have been", source:"George Eloit" }, 
-{quote:"If opportunity doesn't knock build a door", source:"Milton Berle"},
-{quote: "Jumping at several small opportunities may get us there more quickly than waiting for one big one to come along.", source: "Hugh Allen"},
-{quote: "Opportunities fly by while we sit regretting the chances we have lost, and the happiness that comes to us we heed not, because of the happiness that is gone.", source:"Jerome K. Jerome", citation: "The Idle Thoughts of an Idle Fellow", year: "1889"},
-{quote: "You've got a lot of choices. If getting out of bed in the morning is a chore and you're not smiling on a regular basis, try another choice.", source: "Steven D. Woodhull",  year: "1999"},
-{quote: "Shoot for the moon. Even if you miss, you'll land among the stars.", source: "Les Brown"},
-{quote: "In response to those who say to stop dreaming and face reality, I say keep dreaming and make reality.", source: "Kristian Kan", citation: "Rich By 25"},
-{quote: "Don't let anyone steal your dream. It's your dream, not theirs.", source: "Dan Zadra"},
-{quote: "To the question of your life, you are the only answer. To the problems of your life, you are the only solution.", source: "Jo Coudert", citation: "Advice From A Failure"},
-{quote: "We are keenly aware of the faults of our friends, but if they like us enough it doesn’t matter.", source: "Mignon McLaughlin",  year: "1960"},
-{quote: "Success is 10% inspiration, 90% last-minute changes.", source: "From a billboard advertisement"},
-{quote: "I don't care how much power, brilliance or energy you have, if you don't harness it and focus it on a specific target, and hold it there you're never going to accomplish as much as your ability warrants.", source: "Zig Ziglar"},
-{quote: "If you have built castles in the air, your work need not be lost; that is where they should be. Now put the foundations under them.", source: "Henry David Thoreau", year: "1854"}
+{quote:"A positive attitude may not solve all your problems, but it will annoy enough people to make it worth the effort", source: "Herm Albright", citation: "Reader's Digest", year:"1995", tags: "#Attitude"}, 
+{quote:"Wherever you go, no matter what the weather, always bring your own sunshine. ", source:"Anthony J. D' Angelo", source: "The College Blue Book", tags: "#Attitude"}, 
+{quote:"To find someone who will love you for no reason, and to shower that person with reasons, that is the ultimate happiness.", source:"Robert Brault", tags: "#Love"}, 
+{quote:"It is never too late to be what you might have been", source:"George Eloit", tags: "#Action"}, 
+{quote:"If opportunity doesn't knock build a door", source:"Milton Berle", tags: "#Opportunity"},
+{quote: "Jumping at several small opportunities may get us there more quickly than waiting for one big one to come along.", source: "Hugh Allen", tags: "#Opportunity"},
+{quote: "Opportunities fly by while we sit regretting the chances we have lost, and the happiness that comes to us we heed not, because of the happiness that is gone.", source:"Jerome K. Jerome", citation: "The Idle Thoughts of an Idle Fellow", year: "1889", , tags: "#Opportunities"},
+{quote: "You've got a lot of choices. If getting out of bed in the morning is a chore and you're not smiling on a regular basis, try another choice.", source: "Steven D. Woodhull",  year: "1999", tags: "#Choices"},
+{quote: "Shoot for the moon. Even if you miss, you'll land among the stars.", source: "Les Brown", tags: "#Goals"},
+{quote: "In response to those who say to stop dreaming and face reality, I say keep dreaming and make reality.", source: "Kristian Kan", citation: "Rich By 25", tags: ""},
+{quote: "Don't let anyone steal your dream. It's your dream, not theirs.", source: "Dan Zadra", tags: "#Dream"},
+{quote: "To the question of your life, you are the only answer. To the problems of your life, you are the only solution.", source: "Jo Coudert", citation: "Advice From A Failure", tags: "#Failure"},
+{quote: "We are keenly aware of the faults of our friends, but if they like us enough it doesn’t matter.", source: "Mignon McLaughlin",  year: "1960", tags: "#Friendship"},
+{quote: "Success is 10% inspiration, 90% last-minute changes.", source: "From a billboard advertisement", tags: "#Success"},
+{quote: "I don't care how much power, brilliance or energy you have, if you don't harness it and focus it on a specific target, and hold it there you're never going to accomplish as much as your ability warrants.", source: "Zig Ziglar", tags: "#Determination"},
+{quote: "If you have built castles in the air, your work need not be lost; that is where they should be. Now put the foundations under them.", source: "Henry David Thoreau", year: "1854", tags: "#Goals"}
 ];
 
 
