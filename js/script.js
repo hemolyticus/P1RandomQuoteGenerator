@@ -14,7 +14,7 @@ About: This will hold the 30 second delay
 var delayTime=30000;
 
 
-var previouslydisplayedQuotes;
+
 /*
 Variable name: quoteList
 Type: Array
@@ -23,7 +23,7 @@ About: Contains the list of quotes to be used in the application
 */
 var quoteList= [
 {quote:"A positive attitude may not solve all your problems, but it will annoy enough people to make it worth the effort", source: "Herm Albright", citation: "Reader's Digest", year:"1995", tags: "#Attitude"}, 
-{quote:"Wherever you go, no matter what the weather, always bring your own sunshine. ", source:"Anthony J. D' Angelo", source: "The College Blue Book", tags: "#Attitude"}, 
+{quote:"Wherever you go, no matter what the weather, always bring your own sunshine. ", source:"Anthony J. D' Angelo", citation: "The College Blue Book", tags: "#Attitude"}, 
 {quote:"To find someone who will love you for no reason, and to shower that person with reasons, that is the ultimate happiness.", source:"Robert Brault", tags: "#Love"}, 
 {quote:"It is never too late to be what you might have been", source:"George Eloit", tags: "#Action"}, 
 {quote:"If opportunity doesn't knock build a door", source:"Milton Berle", tags: "#Opportunity"},
@@ -72,24 +72,20 @@ function printQuote()
 {
 
 	var generatedQuote  = getRandomQuote();
-
-	previouslydisplayedQuotes=generatedQuote;
-	console.log(previouslydisplayedQuotes);
-	
     var message = '<p class="quote">' + generatedQuote.quote + '</p>';
        message +='<p class="source">' + generatedQuote.source ;
        if (generatedQuote.hasOwnProperty("citation"))
         {
         	message+='<span class="citation">' + generatedQuote.citation + '</span>';
-        };
+        }
         if (generatedQuote.hasOwnProperty("year"))
         {
         	message+='<span class="year">' + generatedQuote.year + '</span>';
-        };
+        }
         if (generatedQuote.hasOwnProperty("tags"))
         {
         	message+='<span class="tag">' + generatedQuote.tags + '</span>';
-        };
+        }
         message +="</p>";
            
     var div= document.getElementById("quote-box");
@@ -111,7 +107,7 @@ About: Generates a random hexadecimal string and assigns it to a variable color
 function generateRandomBackgroundColour()
 {
 	
-    color='#'+(Math.random()*0xFFFFFF<<0).toString(16);
+    var color='#'+(Math.random()*0xFFFFFF<<0).toString(16);
     document.getElementById('body-box').style.background = color;
 
 }
