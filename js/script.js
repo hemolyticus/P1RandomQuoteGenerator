@@ -6,8 +6,15 @@ About: This will hold the index of the quote from the quoteList
 */ 
 var randomQuote;
 
+/*
+Variable name: delayTime
+Type: int
+About: This will hold the 30 second delay
+*/ 
+var delayTime=30000;
 
 
+var previouslydisplayedQuotes;
 /*
 Variable name: quoteList
 Type: Array
@@ -63,7 +70,12 @@ About: Calls the getRandomQuote() method which returns a randomQuote object
 
 function printQuote()
 {
+
 	var generatedQuote  = getRandomQuote();
+
+	previouslydisplayedQuotes=generatedQuote;
+	console.log(previouslydisplayedQuotes);
+	
     var message = '<p class="quote">' + generatedQuote.quote + '</p>';
        message +='<p class="source">' + generatedQuote.source ;
        if (generatedQuote.hasOwnProperty("citation"))
@@ -83,6 +95,7 @@ function printQuote()
     var div= document.getElementById("quote-box");
     div.innerHTML = message;
     generateRandomBackgroundColour();
+
     
 }
 
@@ -100,7 +113,15 @@ function generateRandomBackgroundColour()
 	
     color='#'+(Math.random()*0xFFFFFF<<0).toString(16);
     document.getElementById('body-box').style.background = color;
+
 }
+
+
+
+setInterval(printQuote, delayTime);
+
+
+
 // event listener to respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
