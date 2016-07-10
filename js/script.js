@@ -12,7 +12,7 @@ var quoteList= [
 function getRandomQuote()
 {
 	var randomNumber= Math.floor(Math.random * 5) + 1;
-
+    
 	return quoteList[randomNumber];
 
 	
@@ -20,7 +20,7 @@ function getRandomQuote()
 
 function printQuote()
 {
-	var generatedQuote = getRandomQuote();
+	var generatedQuote  = getRandomQuote();
     var message = '<p class="quote">' + generatedQuote.name + '</p>';
     message +='<p class="source">' + generatedQuote.source + '</p>';
     
