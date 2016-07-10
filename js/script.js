@@ -25,14 +25,20 @@ function printQuote()
 	var generatedQuote  = getRandomQuote();
     var message = '<p class="quote">' + generatedQuote.quote + '</p>';
        message +='<p class="source">' + generatedQuote.source + '</p>';
-       message += '<br><br>';
+     
     var div= document.getElementById("quote-box");
     div.innerHTML = message;
+    generateRandomBackgroundColour();
     
 }
 
 
-
+function generateRandomBackgroundColour()
+{
+	
+    color='#'+(Math.random()*0xFFFFFF<<0).toString(16);
+    document.getElementById('body-box').style.background = color;
+}
 // event listener to respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
