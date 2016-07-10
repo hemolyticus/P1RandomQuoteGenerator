@@ -21,10 +21,10 @@ var quoteList= [
 {quote:"It is never too late to be what you might have been", source:"George Eloit", tags: "#Action"}, 
 {quote:"If opportunity doesn't knock build a door", source:"Milton Berle", tags: "#Opportunity"},
 {quote: "Jumping at several small opportunities may get us there more quickly than waiting for one big one to come along.", source: "Hugh Allen", tags: "#Opportunity"},
-{quote: "Opportunities fly by while we sit regretting the chances we have lost, and the happiness that comes to us we heed not, because of the happiness that is gone.", source:"Jerome K. Jerome", citation: "The Idle Thoughts of an Idle Fellow", year: "1889", , tags: "#Opportunities"},
+{quote: "Opportunities fly by while we sit regretting the chances we have lost, and the happiness that comes to us we heed not, because of the happiness that is gone.", source:"Jerome K. Jerome", citation: "The Idle Thoughts of an Idle Fellow", year: "1889",  tags: "#Opportunities"},
 {quote: "You've got a lot of choices. If getting out of bed in the morning is a chore and you're not smiling on a regular basis, try another choice.", source: "Steven D. Woodhull",  year: "1999", tags: "#Choices"},
 {quote: "Shoot for the moon. Even if you miss, you'll land among the stars.", source: "Les Brown", tags: "#Goals"},
-{quote: "In response to those who say to stop dreaming and face reality, I say keep dreaming and make reality.", source: "Kristian Kan", citation: "Rich By 25", tags: ""},
+{quote: "In response to those who say to stop dreaming and face reality, I say keep dreaming and make reality.", source: "Kristian Kan", citation: "Rich By 25", tags: "#Dreams"},
 {quote: "Don't let anyone steal your dream. It's your dream, not theirs.", source: "Dan Zadra", tags: "#Dream"},
 {quote: "To the question of your life, you are the only answer. To the problems of your life, you are the only solution.", source: "Jo Coudert", citation: "Advice From A Failure", tags: "#Failure"},
 {quote: "We are keenly aware of the faults of our friends, but if they like us enough it doesn’t matter.", source: "Mignon McLaughlin",  year: "1960", tags: "#Friendship"},
@@ -65,7 +65,7 @@ function printQuote()
 {
 	var generatedQuote  = getRandomQuote();
     var message = '<p class="quote">' + generatedQuote.quote + '</p>';
-       message +='<p class="source">' + generatedQuote.source + '</p>';
+       message +='<p class="source">' + generatedQuote.source ;
        if (generatedQuote.hasOwnProperty("citation"))
         {
         	message+='<span class="citation">' + generatedQuote.citation + '</span>';
@@ -74,6 +74,11 @@ function printQuote()
         {
         	message+='<span class="year">' + generatedQuote.year + '</span>';
         };
+        if (generatedQuote.hasOwnProperty("tags"))
+        {
+        	message+='<span class="tag">' + generatedQuote.tags + '</span>';
+        };
+        message +="</p>";
            
     var div= document.getElementById("quote-box");
     div.innerHTML = message;
