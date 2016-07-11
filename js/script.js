@@ -92,7 +92,6 @@ function printQuote()
     div.innerHTML = message;
     generateRandomBackgroundColour();
 
-    
 }
 
 /*
